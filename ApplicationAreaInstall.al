@@ -9,8 +9,6 @@ codeunit 50101 "Application Area Install"
         ApplicationAreaMgmtFacade: Codeunit "Application Area Mgmt. Facade";
     begin
         if ExperienceTierSetup.Get(CompanyName()) then;
-        if not ExperienceTierSetup.Essential then
-            exit;
 
         if ApplicationAreaMgmtFacade.GetApplicationAreaSetupRecFromCompany(ApplicationAreaSetup, CompanyName()) then begin
             ApplicationAreaSetup.Ext2Experience := true;
