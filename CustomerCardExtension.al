@@ -6,7 +6,7 @@ pageextension 50110 CustomerListExt extends "Customer Card"
         {
             field(MyField; 'FieldSource')
             {
-                ApplicationArea = Advanced;
+                ApplicationArea = All;
                 Caption = 'Sample Field';
             }
         }
