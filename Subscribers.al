@@ -9,4 +9,10 @@ codeunit 50100 Subsribers
             ApplicationAreasSet := true;
         end;
     end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Application Area Mgmt. Facade", 'OnGetEssentialExperienceAppAreas', '', false, false)]
+    local procedure MyProcedure(var TempApplicationAreaSetup: Record "Application Area Setup")
+    begin
+        TempApplicationAreaSetup.Ext2Experience := true;
+    end;
 }
